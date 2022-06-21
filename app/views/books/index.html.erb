@@ -15,18 +15,14 @@
         <tr>
           <td><%= list.title %></td>
           <td><%= list.body %></td>
-          <td class="get_pages">
-            <span><%= link_to "Show", "/lists/#{list.id}" %></span>
-            <span><%= link_to "Edit", "/lists/#{list.id}/edit" %></span>
-            <span><%= link_to "Destroy",  destroy_list_path(list.id), method: :delete, "data-confirm" => "本当に削除しますか？"%></span>
-          </td>
         </tr>
       <% end %>
+
     </table>
 
     <h2>New book</h2>
 
-    <%= form_with model: @list do |f| %>
+    <%= form_with model: @list , url: 'create'  do |f| %>
       <div class="input_field">
         <h4>Title</h4>
         <%= f.text_field :title %>

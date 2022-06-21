@@ -18,7 +18,7 @@
           <td class = "get_pages">
             <span><%= link_to "Show", "/books/#{list.id}" %></span>
             <span><%= link_to "Edit", "/books/#{list.id}/edit" %></span>
-            <span><%= link_to "Destroy",  destroy_list_path(list.id), method: :delete, "data-confirm" => "本当に削除しますか？"%></span>
+         　  <span><%= link_to "Destroy", "/books/#{list.id}", method: :delete, "data-confirm" => "本当に削除しますか？"%></span>
           </td>
         </tr>
       <% end %>

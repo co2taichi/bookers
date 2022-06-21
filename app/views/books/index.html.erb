@@ -15,6 +15,11 @@
         <tr>
           <td><%= list.title %></td>
           <td><%= list.body %></td>
+          <td class = "get_pages">
+            <span><%= link_to "Show", "/books/#{list.id}" %></span>
+            <span><%= link_to "Edit", "/" %></span>
+
+          </td>
         </tr>
       <% end %>
 
@@ -22,7 +27,7 @@
 
     <h2>New book</h2>
 
-    <%= form_with model: @list , url: 'create'  do |f| %>
+    <%= form_with model: @list , url: '/books'  do |f| %>
       <div class="input_field">
         <h4>Title</h4>
         <%= f.text_field :title %>

@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'edit', media: 'all'%>
 <h1>Editing Book</h1>
 
-<%= form_with model: @list, url: "/books/#{@list.id}", method: :patch do |f| %>
+<%= form_with model: @book, url: "/books/#{@book.id}", method: :patch do |f| %>
   <div class="filed">
     <p>Title</p>
     <%= f.text_field:title %>
@@ -15,6 +15,6 @@
   </div>
 <% end %>
 
-<span><%= link_to "Show", "/books/#{@list.id}" %></span>
+<span><%= link_to "Show", "/books/#{@book.id}" %></span>
 <span> | </span>
 <span><%= link_to "Back", "/books" %></span>

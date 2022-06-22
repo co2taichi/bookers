@@ -4,8 +4,8 @@
         <%= flash[:notice] %>
     </p>
 </div>
-<p><strong>Title: </strong><%= @list.title %></p>
-<p><strong>Body: </strong><%= @list.body %></p>
-<span><%= link_to "Edit", "/books/#{@list.id}/edit" %></span>
+<p><strong>Title: </strong><%= @book.title %></p>
+<p><strong>Body: </strong><%= @book.body %></p>
+<span><%= link_to "Edit", "/books/#{@book.id}/edit" %></span>
 <span> | </span>
 <span><%= link_to "Back", "/books" %></span>

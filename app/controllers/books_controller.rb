@@ -3,38 +3,38 @@ class BooksController < ApplicationController
   end
 
   def index
-    @list = List.new
-    @lists = List.all
+    @list = Book.new
+    @lists = Book.all
   end
 
   def create
-    list = List.new(list_params)
+    list = Book.new(list_params)
     list.save
-    redirect_to '/books/index'
+    redirect_to '/books'
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = Book.find(params[:id])
   end
 
   def edit
-    @list = List.find(params[:id])
+    @list = Book.find(params[:id])
   end
 
   def update
-    list = List.find(params[:id])
+    list = Book.find(params[:id])
     list.update(list_params)
     redirect_to "/books/#{list.id}"
   end
 
   def destroy
-    list = List.find(params[:id])
+    list = Book.find(params[:id])
     list.destroy
-    redirect_to '/books/index'
+    redirect_to '/books'
   end
 
   private
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:book).permit(:title, :body)
   end
 end

@@ -1,4 +1,9 @@
 <%= stylesheet_link_tag 'show', media: 'all'%>
+<div class="success">
+    <p>
+        <%= flash[:notice] %>
+    </p>
+</div>
 <p><strong>Title: </strong><%= @list.title %></p>
 <p><strong>Body: </strong><%= @list.body %></p>
 <span><%= link_to "Edit", "/books/#{@list.id}/edit" %></span>

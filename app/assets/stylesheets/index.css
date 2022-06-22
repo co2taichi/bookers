@@ -26,25 +26,3 @@ h4{
   margin: 0;
 }
 
-.errors-value{
-  color: white;
-  background-color: red;
-  padding: 5px 5px 5px 15px;
-  margin: 0;
-  font-size: 12px;
-}
-
-.errors-content{
-  background-color: #f0f0f0;
-  width: 450px;
-  /*border-color: : red;*/
-  font-size: 12px;
-  margin-bottom: 20px;
-  border: solid;
-  border-width: 2px;
-  border-color: red;
-}
-
-.errors-text{
-  margin: 33px;
-}
